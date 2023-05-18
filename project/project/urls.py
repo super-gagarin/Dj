@@ -24,3 +24,5 @@ urlpatterns = [
     path('pages/', include('django.contrib.flatpages.urls')),
     path('', redirect_view)
 ]
+
+handler404 = "project.views.page_not_found_view"
