@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    {{ flatpage.content }}
-    {{ flatpage.content }}
-</body>
-</html>
+{% extends 'flatpages/default.html' %}
+ 
+{% block title %}
+{{ flatpage.title }}
+{% endblock title %}
+ 
+{% block content %}
+    <h1>{{ flatpage.title }}</h1>
+    <hr>
+    <h2>Лозунг юзверя</h2>
+{{ flatpage.content }}
+{{ flatpage.content }}
+{% endblock content %}
